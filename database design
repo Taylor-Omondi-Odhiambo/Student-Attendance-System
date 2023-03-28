@@ -1,0 +1,15 @@
+Classes table (Name of Table is the class e.g: CCS 224):
+    Student ID
+    Student First Name
+    Student Surname
+    Classes attended(Want it to auto increment every time the student is in class )
+    Teacher in charge of class
+    Total classes(Want it to auto increment every time a class occurs)
+
+Teachers table (Name of the Table is the teacher's name e.g Mr. Moturi)
+    Classes they're teaching
+
+Students table (Name of the Table is the Student's name)
+    Classes they're taking
+
+

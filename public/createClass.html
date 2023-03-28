@@ -1,12 +1,21 @@
 <!DOCTYPE html>
     <html>
         <head>
-            <link rel ="stylesheet" href="">
-            <link rel ="stylesheet" href="">
+            <link rel ="stylesheet" href="createClass.css">
+            <script src="https://kit.fontawesome.com/57a72e588d.js" crossorigin="anonymous"></script>
         </head>
         <body>
-            <h1>Create Class</h1>
+
+                <form id="classCreation" name ="classCreation" action ="/createClass" method="post">
+                    <legend id="legend">Create Class</legend><br>
+                    <label for="classID">Class ID:</label>
+                    <input type ="text" name = "classID" placeholder = "Enter class ID" required><br><br>
+                    <label for = "teacher">Teacher:</label>
+                    <input type = "text" name = "teacher" placeholder = "Enter teacher name" required><br><br>
+                    <input class = "button" type = "Submit" value="Create Class"/>
+                </form><br><br>
+                <p id = "notification"></p>
         </body>
-        <script src ="">
+        <script src ="createClass.js">
         </script>
     </html>

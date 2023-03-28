@@ -5,11 +5,45 @@
 body{
     background-color: #f2e9e4;
 }
-#main{
+#set1{
+    margin: 50px 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+}
+#set2{
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-around;
 }
 #createClass-btn{
+    border-radius: 10px;
+    height: 100px;
+    width: 100px;
+    color: #22223b;
+    background-color: #c9ada7;
+}
+#classes{
+    border-radius: 10px;
+    height: 100px;
+    width: 100px;
+    color: #22223b;
+    background-color: #c9ada7;
+}
+#teachers{
+    border-radius: 10px;
+    height: 100px;
+    width: 100px;
+    color: #22223b;
+    background-color: #c9ada7;
+}
+#attendance{
+    border-radius: 10px;
+    height: 100px;
+    width: 100px;
+    color: #22223b;
+    background-color: #c9ada7;
+}
+#students{
     border-radius: 10px;
     height: 100px;
     width: 100px;

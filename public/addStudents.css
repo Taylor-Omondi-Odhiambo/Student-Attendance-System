@@ -8,19 +8,11 @@ body{
     padding: 5px 10px;
     border-radius: 10px;
 }
-
 #legend{
     background-color: #22223b;
     color:#f2e9e4
 }
-#classCreation{
-   border: solid black 3px;
-   display: block;
-   margin: 0 auto;
-   width: 270px;
-   height: 200px;
-   text-align: center;
-}
+
 #studentCreation{
     margin: 10px 0;
     border: solid black 3px;

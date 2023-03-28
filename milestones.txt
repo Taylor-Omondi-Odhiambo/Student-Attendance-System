@@ -1,0 +1,13 @@
+1. Create home page. DONE
+2. Add ability to create classes: DONE
+    (CRITICAL) (own page: Create classes page)
+3. Add ability to add students to a class: DONE
+    (CRITICAL) (same page as create classes)
+4. Add ability to take attendance: DONE
+    (CORE OF THE PRODUUCT) (own page: Attendance page)
+5. Add ability to check attendance of a specific student for individual classes:
+    (CRITICAL) (own page: Students page)
+6. Add ability to pull and display all students of a particular class:
+    (own page: Classes page)
+7. Add ability to pull and display all classes taught by a particular teacher:
+    (own page: Teachers page)
