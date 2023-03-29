@@ -38,7 +38,7 @@ Status codes
 */
 //Initialize home page
 app.get('/',(req,res) => {
-    res.status(200).sendFile(path.join(__dirname,'/index.html'))
+   res.status(200)
 })
 app.post('/createClass',(req,res) =>{
     const classID = req.body.classID

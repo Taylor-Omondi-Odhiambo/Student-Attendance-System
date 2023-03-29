@@ -1,0 +1,16 @@
+
+body{
+    background-color: #f2e9e4;
+}
+
+#horizontalMenu{
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    top: 0px;
+    background-color: #22223b;
+}
+.links{
+    color:#f2e9e4;
+    text-decoration:none;
+}

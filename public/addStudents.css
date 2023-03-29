@@ -1,5 +1,4 @@
 body{
-    margin: 40px 0;
     background-color: #f2e9e4;
 }
 .button{
@@ -29,4 +28,15 @@ body{
     width: 30%;
     border-radius: 10px;
     margin: 0 auto;
+}
+#horizontalMenu{
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    top: 0px;
+    background-color: #22223b;
+}
+.links{
+    color:#f2e9e4;
+    text-decoration:none;
 }
