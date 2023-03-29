@@ -3,7 +3,7 @@
     (CRITICAL) (own page: Create classes page)
 3. Add ability to add students to a class: DONE
     (CRITICAL) (same page as create classes)
-4. Add ability to take attendance: DONE
+4. Add ability to take attendance: 
     (CORE OF THE PRODUUCT) (own page: Attendance page)
 5. Add ability to check attendance of a specific student for individual classes:
     (CRITICAL) (own page: Students page)

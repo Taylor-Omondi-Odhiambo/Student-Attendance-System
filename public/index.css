@@ -61,6 +61,13 @@ body{
     color: #22223b;
     background-color: #c9ada7;
 }
+#addStudents{
+    border-radius: 10px;
+    height: 100px;
+    width: 100px;
+    color: #22223b;
+    background-color: #c9ada7;
+}
 #footer {
     position: fixed;
     left:0;

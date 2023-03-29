@@ -30,6 +30,7 @@ conn.connect((err) =>{
         console.log("Database connection successful")
     }
 })
+
 /*
 Status codes
 200 - OK
@@ -37,6 +38,7 @@ Status codes
 404 - not found  
 */
 //Initialize home page
+
 app.get('/',(req,res) => {
    res.status(200)
 })
@@ -51,7 +53,19 @@ app.post('/createClass',(req,res) =>{
             }
             else
             {
-                //res.send("Success")
+                const script = (`<script> const studentID = document.querySelector("#studentID")
+                const firstName = document.querySelector("#firstName")
+                const surname = document.querySelector("#surname")
+                const classID = document.querySelector("#classID")
+                
+                document.querySelector("#studentCreation").addEventListener("submit",() => {
+                    if (studentID.value!= ""  && firstName.value!= "" && surname.value!= "" && classID.value!= "" )
+                    {
+                        notification()
+                    }
+                    
+                })</script>`)
+                res.send(script)
                 console.log(`${classID} created successfully`)
             }
         })
