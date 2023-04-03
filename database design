@@ -8,8 +8,11 @@ Classes table (Name of Table is the class e.g: CCS 224):
 
 Teachers table (Name of the Table is the teacher's name e.g Mr. Moturi)
     Classes they're teaching
+    Number of students in that class
 
 Students table (Name of the Table is the Student's name)
     Classes they're taking
+    Attendance in each class
+    Relevant credentials StudentID, Names etc.
 
 

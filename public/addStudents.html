@@ -21,8 +21,11 @@
             <label for = "surname">Surname:</label>
             <input type ="text" id = "surname" name ="surname" placeholder = "Enter Surname" required><br><br>
             <label for = "classID">Class ID:</label>
-            <input type ="text" id = "classID" name = "classID" placeholder = "Enter Class ID" required><br><br>
-            <input class = "button" type = "Submit" value="Add Student"/>
+            <select name = "classID">
+                <option></option>
+            </select><br><br>
+            <!-- <input type ="text" id = "classID" name = "classID" placeholder = "Enter Class ID" required><br><br> -->
+            <input class = "button" type = "Submit" onclick=resetForm() value="Add Student"/>
         </form><br>
         <p id = "notification"></p>
         <script src ="addStudents.js">
