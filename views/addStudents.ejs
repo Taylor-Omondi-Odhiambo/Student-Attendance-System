@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel ="stylesheet" href="/addStudents.css">
+        <script src="https://kit.fontawesome.com/57a72e588d.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id = "horizontalMenu">
+            <a class = "links" href = "index.ejs">Home<i class = "fas fa-home"></i></a>
+            <a class = "links" href = "classes.html">Classes<i class="fas fa-book"></i></a>
+            <a class = "links" href = "createClass.html">Create Class<i class="fas fa-plus"></i></a>
+            <a class = "links" href = "students.html">Students<i class="fas fa-users"></i></a>
+            <a class = "links" href = "teachers.html">Teachers<i class="fas fa-users"></i></a>
+            <a class = "links" href = "attendance.html">Take Attendance<i class="fas fa-address-book"></i></a>
+        </div><br><br>
+        <form id="studentCreation" name ="studentCreation" action ="/addStudents" method="post">
+            <legend id = "legend">Add Student</legend><br>
+            <label for = "studentID">Student ID:</label>
+            <input type ="text" id = "studentID"name = "studentID" placeholder = "Enter Student ID" required><br><br>
+            <label for = "firstName">First Name:</label>
+            <input type = "text" id ="firstName" name = "firstName" placeholder = "Enter Student First name" required><br><br>
+            <label for = "surname">Surname:</label>
+            <input type ="text" id = "surname" name ="surname" placeholder = "Enter Surname" required><br><br>
+            <label for = "classID">Class ID:</label>
+            <!-- <select name = "classID" id = "classID"></select><br><br> -->
+            <input type ="text" id = "classID" name = "classID" placeholder = "Enter Class ID" required><br><br>
+            <!--<button type = "submit" class = "button" id = "submit-btn">Add Student</button>-->
+            <input class = "button" type = "Submit" onclick=resetForm() value="Add Student">
+            <!--<input class = "button" id = "submit-btn" type = "Submit" value="Add Student">-->
+        </form><br>
+        <p id = "notification"></p>
+        <div id = "success-msg" style = "display: none;">Student successfully added</div>
+    </body>
+    
+        <script src ="/addStudents.js"></script>
+    
+</html>

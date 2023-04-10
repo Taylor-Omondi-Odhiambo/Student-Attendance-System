@@ -1,29 +1,34 @@
 //libraries
 import express from 'express'
 import mysql from 'mysql'
-import fetch from 'node-fetch';
+import fetch from 'node-fetch'
 import bodyParser from 'body-parser'
 import path from 'path'
-import url from 'url';
+import url from 'url'
+import ejs from 'ejs'
 const app = express()
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 //middleware
+
 app.use(express.static(path.join(__dirname,'/public')))//method to identify folder with static files
 app.use(express.urlencoded({extended:true}))//this is to accept data sent through the html form
 app.use(express.json())//used to accept data in Json format
 app.use(bodyParser.json());
+app.set('views',path.join(__dirname,'/views'))//methode to identify folder with ejs files
+app.set('view engine','ejs')
 
 //Create database connection
 const conn = mysql.createConnection({
     host: 'localhost',
     user:'root',
-    password: null,
-    database:'project'
+    password:null,
+    database:'Project'
 })
 
 //Connect to database
+
 conn.connect((err) =>{
     if (err)
     {
@@ -44,10 +49,12 @@ Status codes
 //Initialize home page
 
 app.get('/',(req,res) => {
-   res.status(200)
+   res.status(200).render('index.ejs')
 })
 
+
 app.post('/createClass',(req,res) =>{
+    res.render('addStudents')
     const classID = req.body.classID
     const teacher = req.body.teacher
     conn.query((`INSERT INTO Classes (ClassID, Teacher) VALUES("${classID}","${teacher}")`),(err,result) =>{ //This table is prebuilt into the database
@@ -170,21 +177,7 @@ app.post('/addStudents',(req,res) =>{
     step4()
     step5()
 })
-app.get('/classesOptions',(res,req) =>{
-    conn.query((`SELECT ClassID FROM Classes `),(err,results,fields) =>{
-        if (err)
-        {
-            console.log(err)
-        }
-        else
-        {
-            const option = results.map(() => {
-                `<option value = "${results}">${results}</option>`
-            }).join('')
-            const dropDownHTML = `<select>${options}</select>`
-        }
-    })
-})
+
 //port for the server to listen to
 app.listen(5000,(req,res) =>{
     console.log('Server runnning on port 5000...')

@@ -8,6 +8,7 @@
     "axe/parsing": "off",
     "meta-viewport": "off",
     "meta-charset-utf-8": "off",
-    "axe/forms": "off"
+    "axe/forms": "off",
+    "no-inline-styles": "off"
   }
 }

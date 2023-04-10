@@ -20,15 +20,17 @@
             <input type = "text" id ="firstName" name = "firstName" placeholder = "Enter Student First name" required><br><br>
             <label for = "surname">Surname:</label>
             <input type ="text" id = "surname" name ="surname" placeholder = "Enter Surname" required><br><br>
-            <label for = "classID">Class ID:</label>
-            <select name = "classID">
-                <option></option>
-            </select><br><br>
+            <label for = "classID">Class ID:</label> 
+            <!-- <select name = "classID" id = "classID"></select><br><br> -->
             <!-- <input type ="text" id = "classID" name = "classID" placeholder = "Enter Class ID" required><br><br> -->
-            <input class = "button" type = "Submit" onclick=resetForm() value="Add Student"/>
-        </form><br>
+            <!--<button type = "submit" class = "button" id = "submit-btn">Add Student</button>-->
+            <!-- <input class = "button" type = "Submit" onclick=resetForm() value="Add Student"> -->
+            <!--<input class = "button" id = "submit-btn" type = "Submit" value="Add Student">-->
+            </form><br>
         <p id = "notification"></p>
-        <script src ="addStudents.js">
-        </script>
+        <div id = "success-msg" style = "display: none;">Student successfully added</div>
     </body>
+    
+        <script src ="addStudents.js"></script>
+    
 </html>
