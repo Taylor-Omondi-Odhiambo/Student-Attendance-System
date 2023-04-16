@@ -1,4 +1,4 @@
-document.querySelector(".button").addEventListener("click", () => {
+/*document.querySelector(".button").addEventListener("click", () => {
     notification()
     
 })
@@ -15,4 +15,4 @@ function notification (){
         document.querySelector("#notification").textContent = ""
     },1000)
     
-}
+}*/

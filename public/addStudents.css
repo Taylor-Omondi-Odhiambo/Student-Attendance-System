@@ -40,3 +40,8 @@ body{
     color:#f2e9e4;
     text-decoration:none;
 }
+#warning{
+    text-align: center;
+    color: #22223b;
+    font-weight: 1000;
+}

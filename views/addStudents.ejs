@@ -6,12 +6,15 @@
     <body>
         <div id = "horizontalMenu">
             <a class = "links" href = "index.ejs">Home<i class = "fas fa-home"></i></a>
-            <a class = "links" href = "classes.html">Classes<i class="fas fa-book"></i></a>
-            <a class = "links" href = "createClass.html">Create Class<i class="fas fa-plus"></i></a>
-            <a class = "links" href = "students.html">Students<i class="fas fa-users"></i></a>
-            <a class = "links" href = "teachers.html">Teachers<i class="fas fa-users"></i></a>
-            <a class = "links" href = "attendance.html">Take Attendance<i class="fas fa-address-book"></i></a>
+            <a class = "links" href = "classes.ejs">Classes<i class="fas fa-book"></i></a>
+            <a class = "links" href = "createClass.ejs">Create Class<i class="fas fa-plus"></i></a>
+            <a class = "links" href = "students.ejs">Students<i class="fas fa-users"></i></a>
+            <a class = "links" href = "teachers.ejs">Teachers<i class="fas fa-users"></i></a>
+            <a class = "links" href = "attendance.ejs">Take Attendance<i class="fas fa-address-book"></i></a>
         </div><br><br>
+
+        <p id = "warning">The Student ID should not have slashes / or spaces</p>
+
         <form id="studentCreation" name ="studentCreation" action ="/addStudents" method="post">
             <legend id = "legend">Add Student</legend><br>
             <label for = "studentID">Student ID:</label>
@@ -21,12 +24,16 @@
             <label for = "surname">Surname:</label>
             <input type ="text" id = "surname" name ="surname" placeholder = "Enter Surname" required><br><br>
             <label for = "classID">Class ID:</label>
-            <!-- <select name = "classID" id = "classID"></select><br><br> -->
-            <input type ="text" id = "classID" name = "classID" placeholder = "Enter Class ID" required><br><br>
-            <!--<button type = "submit" class = "button" id = "submit-btn">Add Student</button>-->
-            <input class = "button" type = "Submit" onclick=resetForm() value="Add Student">
-            <!--<input class = "button" id = "submit-btn" type = "Submit" value="Add Student">-->
+            <!-- <input type ="text" id = "classID" name = "classID" placeholder = "Enter Class ID" required><br><br> -->
+            <select type = "text" name = "classID" id = "classID">
+                <option value = "">Select Class</option>
+                <% for(let count =0; count < classes.length; count++) {%>
+                    <option value = "<%= classes[count].ClassID %>"><%= classes[count].ClassID%></option>
+                <% } %>
+            </select><br><br>
+            <input class = "button" type = "submit"  value="Add Student">
         </form><br>
+        
         <p id = "notification"></p>
         <div id = "success-msg" style = "display: none;">Student successfully added</div>
     </body>
