@@ -39,3 +39,31 @@ body{
     color: #22223b;
     font-weight: 1000;
 }
+
+/* <div>
+            <table>
+                <tr>
+                    <td>StudentID</td>
+                    <td>ClassID</td>
+                    <td>FirstName</td>
+                    <td>Surname</td>
+                    <td>Attended</td>
+                    <td>Teacher</td>
+                    <td>TotalClasses</td>
+                </tr>
+                <% for (let i = 0; i < units.length; i++) { %>
+                    <tr>
+                        <td><%=units[i].StudentID%></td>
+                        <td><%=units[i].ClassID%></td>
+                        <td><%=units[i].FirstName%></td>
+                        <td><%=units[i].Surname%></td>
+                        <td><%=units[i].Attended%></td>
+                        <td><%=units[i].Teacher%></td>
+                        <td><%=units[i].TotalClasses%></td>
+                    </tr>
+                <% } %>
+
+            </table>
+            
+                
+        </div> */

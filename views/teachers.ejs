@@ -16,7 +16,17 @@
             <a class = "links" href = "teachers.ejs">Teachers<i class="fas fa-users"></i></a>
             <a class = "links" href = "attendance.ejs">Take Attendance<i class="fas fa-address-book"></i></a>
         </div><br><br>
-
+        <form action="/teachers" method="post" id = "teachers">
+            <legend id = "legend">Classes</legend><br>
+            <label for = "teachers">Teacher:</label>
+            <select type = "text" name = "teacher">
+                <option value = "">Select Teacher</option>
+                <% for (let i = 0; i < teachers.length; i ++) {%>
+                    <option value = "<%= teachers[i].Teacher %>"> <%= teachers[i].Teacher %></option>
+                <% } %>
+            </select><br><br>
+            <input class = "button" type = "submit" value = "Retrieve Teacher Details">
+        </form><br><br>
     </body>
 </html>
     <script src = "/teachers.js">

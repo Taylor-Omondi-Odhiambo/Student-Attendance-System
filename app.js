@@ -13,13 +13,12 @@ const __dirname = path.dirname(__filename);
 
 //middleware
 
-app.use(express.urlencoded({extended:false}))//this is to accept data sent through the html form
+app.use(express.urlencoded({extended:true}))//this is to accept data sent through the html form
 app.use(express.json())//used to accept data in Json format
 app.use(bodyParser.json());
 app.set('views','./views')//method to identify folder with ejs files
 app.set('view engine','ejs')
 app.use(express.static(path.join(__dirname,'/public')))//method to identify folder with static files
-
 //Create database connection
 const conn = mysql.createConnection({
     host: 'localhost',
@@ -90,11 +89,31 @@ app.get('/createClass.html',(req,res) => {
 })
 
 app.get('/students.html',(req,res) => {
-    res.status(200).render('students')
+    conn.query((`SELECT StudentID FROM Students`),(err,result) => {
+        if (err)
+        {
+            console.log(err)
+        }
+        else
+        {
+            res.status(200).render('students',{students:result})
+        }
+    })
+    
 })
 
 app.get('/teachers.html',(req,res) => {
-    res.status(200).render('teachers')
+
+    conn.query((`SELECT Teacher FROM Teachers`),(err,result) => {
+        if (err)
+        {
+            console.log(err)
+        }
+        else
+        {
+            res.status(200).render('teachers',{teachers: result})
+        }
+    })
 })
 
 app.get('/index.ejs',(req,res) => {
@@ -137,11 +156,29 @@ app.get('/createClass.ejs',(req,res) => {
 })
 
 app.get('/students.ejs',(req,res) => {
-    res.status(200).render('students')
+    conn.query((`SELECT StudentID FROM Students`),(err,result) => {
+        if (err)
+        {
+            console.log(err)
+        }
+        else
+        {
+            res.status(200).render('students',{students:result})
+        }
+    })
 })
 
 app.get('/teachers.ejs',(req,res) => {
-    res.status(200).render('teachers')
+    conn.query((`SELECT Teacher FROM Teachers`),(err,result) => {
+        if (err)
+        {
+            console.log(err)
+        }
+        else
+        {
+            res.status(200).render('teachers',{teachers: result})
+        }
+    })
 })
 
 
@@ -149,14 +186,14 @@ app.post('/classes',(req,res) =>{
 
     const classID = req.body.classID
 
-    conn.query((`SELECT * FROM Classes`),(err,result) =>{
+    conn.query((`SELECT * FROM ${classID}`),(err,result) =>{
         if (err)
         {
             console.log(err)
         }
         else
-        {
-            res.status(200).render('classes',{classes:result})
+        {   console.log(result)
+            res.status(200).render('displayClasses',{units: result})
         }
     })
 
@@ -323,6 +360,35 @@ app.post('/addStudents',(req,res) =>{
     res.status(201)
 })
 
+app.post('/teachers',(req,res) => {
+
+    const teacher = req.body.teacher
+    conn.query((`SELECT * FROM Teachers WHERE Teacher = "${teacher}"`),(err,result) => {
+        if (err)
+        {
+            console.log(err)
+        }
+        else
+        {
+            res.status(200).render('displayTeachers',{teachers: result})
+        }
+    })
+})
+
+app.post((`/students`),(req,res) => {
+    const student = req.body.student
+
+    conn.query((`SELECT * FROM ${student}`),(err,result) =>{
+        if (err)
+        {
+            console.log(err)
+        }
+        else
+        {
+            res.status(200).render('displayStudents',{students:result})
+        }
+    })
+})
 //port for the server to listen to
 app.listen(5000,(req,res) =>{
     console.log('Server runnning on port 5000...')

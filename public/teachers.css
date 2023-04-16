@@ -13,3 +13,22 @@ body{
     color:#f2e9e4;
     text-decoration:none;
 }
+#legend{
+    background-color: #22223b;
+    color:#f2e9e4
+}
+.button{
+    background-color: #22223b;
+    color:#f2e9e4;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+#teachers{
+    margin: 10px 0;
+    border: solid black 3px;
+    display: block;
+    margin: 0 auto;
+    width: 270px;
+    height: 140px;
+    text-align: center;
+}

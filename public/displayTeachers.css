@@ -1,0 +1,62 @@
+body{
+
+    background-color: #f2e9e4;
+}
+h2{
+    text-align: center;
+    color: #22223b;
+}
+#horizontalMenu{
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    top: 0px;
+    background-color: #22223b;
+}
+.links{
+    color:#f2e9e4;
+    text-decoration:none;
+}
+#legend{
+    background-color: #22223b;
+    color:#f2e9e4
+}
+.button{
+    background-color: #22223b;
+    color:#f2e9e4;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+#table{
+    display: flex;
+    justify-content: space-around;
+}
+.records{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.records thead tr{
+    background-color: #22223b;
+    color:#f2e9e4;
+    text-align: center;
+    font-weight: bold;
+}
+
+.records td{
+    padding: 12px 15px;
+    text-align: center;
+}
+.records tbody tr{
+    border-bottom: 1px solid ;
+}
+.records tbody tr:nth-of-type(even){
+    background-color: #22223b;
+    color: #f2e9e4;
+}
