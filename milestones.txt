@@ -3,11 +3,13 @@
     (CRITICAL) (own page: Create classes page)
 3. Add ability to add students to a class: DONE
     (CRITICAL) (same page as create classes)
-4. Add ability to take attendance: 
+4. Add ability to take attendance: DONE
     (CORE OF THE PRODUUCT) (own page: Attendance page)
-5. Add ability to check attendance of a specific student for individual classes:
+5. Add ability to check attendance of a specific student for individual classes: DONE
     (CRITICAL) (own page: Students page)
-6. Add ability to pull and display all students of a particular class:
+6. Add ability to pull and display all students of a particular class: DONE
     (own page: Classes page)
-7. Add ability to pull and display all classes taught by a particular teacher:
+7. Add ability to pull and display all classes taught by a particular teacher: DONE
     (own page: Teachers page)
+
+Progress: 7/7 major modules

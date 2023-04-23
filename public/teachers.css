@@ -3,11 +3,12 @@ body{
 }
 
 #horizontalMenu{
-    display: flex;
-    justify-content: space-around;
-    position: sticky;
-    top: 0px;
+    position: fixed;
+    width: 100%;
     background-color: #22223b;
+    left: 0%;
+    top: 0%;
+    height: 50px;
 }
 .links{
     color:#f2e9e4;
@@ -23,6 +24,12 @@ body{
     padding: 5px 10px;
     border-radius: 10px;
 }
+#menuIcons{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    margin-top: 15px;
+}
 #teachers{
     margin: 10px 0;
     border: solid black 3px;
@@ -31,4 +38,12 @@ body{
     width: 270px;
     height: 140px;
     text-align: center;
+}
+#warning{
+    text-align: center;
+    color: #22223b;
+    font-weight: 1000;
+}
+#form{
+    margin: 100px 0;
 }

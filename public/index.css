@@ -5,70 +5,46 @@
 body{
     background-color: #f2e9e4;
 }
+
 #horizontalMenu{
-    display: flex;
-    justify-content: space-evenly;
-    position: sticky;
-    top: 0px;
+    position: fixed;
+    width: 100%;
     background-color: #22223b;
+    left: 0%;
+    top: 0%;
+    height: 50px;
 }
+#menuIcons{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    margin-top: 15px;
+}
+
 .links{
     color:#f2e9e4;
     text-decoration:none;
 }
 #set1{
-    margin: 50px 0;
+    margin: 125px 0;
     display: flex;
     justify-content: space-around;
 }
 #set2{
-    margin: 50px 0;
+    margin: 125px 0;
     display: flex;
     justify-content: space-around;
 }
-#createClass-btn{
+
+.mainModules{
     border-radius: 10px;
     height: 100px;
     width: 100px;
     color: #22223b;
-    background-color: #c9ada7;
+    background-color: #f2e9e4; 
 }
-#classes{
-    border-radius: 10px;
-    height: 100px;
-    width: 100px;
-    color: #22223b;
-    background-color: #c9ada7;
-}
-#teachers{
-    border-radius: 10px;
-    height: 100px;
-    width: 100px;
-    color: #22223b;
-    background-color: #c9ada7;
-}
-#attendance{
-    border-radius: 10px;
-    height: 100px;
-    width: 100px;
-    color: #22223b;
-    background-color: #c9ada7;
-}
-#students{
-    border-radius: 10px;
-    height: 100px;
-    width: 100px;
-    color: #22223b;
-    background-color: #c9ada7;
-}
-#addStudents{
-    border-radius: 10px;
-    height: 100px;
-    width: 100px;
-    color: #22223b;
-    background-color: #c9ada7;
-}
-#footer {
+
+/* #footer {
     position: fixed;
     left:0;
     bottom: 0;
@@ -77,4 +53,4 @@ body{
     background-color: #c9ada7;
     color: #22223b;
     text-align: center;
-  }
+  } */

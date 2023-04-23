@@ -8,12 +8,17 @@
 
     <body>
         <div id = "horizontalMenu">
-            <a class = "links" href = "index.ejs">Home<i class="fas fa-home"></i></a>
-            <a class = "links" href = "classes.ejs">Classes<i class="fas fa-book"></i></a>
-            <a class = "links" href = "createClass.ejs">Create Class<i class="fas fa-plus"></i></a>
-            <a class = "links" href = "students.ejs">Students<i class="fas fa-users"></i></a>
-            <a class = "links" href = "teachers.ejs">Teachers<i class="fas fa-users"></i></a>
-            <a class = "links" href = "attendance.ejs">Take Attendance<i class="fas fa-address-book"></i></a>
+            <div id = "menuIcons">
+                <p></p>
+                <a class = "links" href = "students.ejs"><i class = "fas fa-arrow-left"></i>Back</a>
+                <a class = "links" href = "index.ejs">Home<i class="fas fa-home"></i></a>
+                <a class = "links" href = "classes.ejs">Classes<i class="fas fa-book"></i></a>
+                <a class = "links" href = "createClass.ejs">Create Class<i class="fas fa-plus"></i></a>
+                <a class = "links" href = "students.ejs">Students<i class="fas fa-users"></i></a>
+                <a class = "links" href = "teachers.ejs">Teachers<i class="fas fa-users"></i></a>
+                <a class = "links" href = "attendance.ejs">Take Attendance<i class="fas fa-address-book"></i></a>
+                <p></p>
+            </div>
         </div><br><br>
         <h2><%=students[0].StudentID%> 's Data</h2>
         <div id = "table">

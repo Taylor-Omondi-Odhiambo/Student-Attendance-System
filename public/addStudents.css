@@ -30,11 +30,12 @@ body{
     margin: 0 auto;
 }
 #horizontalMenu{
-    display: flex;
-    justify-content: space-around;
-    position: sticky;
-    top: 0px;
+    position: fixed;
+    width: 100%;
     background-color: #22223b;
+    left: 0%;
+    top: 0%;
+    height: 50px;
 }
 .links{
     color:#f2e9e4;
@@ -46,3 +47,9 @@ body{
     font-weight: 1000;
 }
 
+#menuIcons{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    margin-top: 15px;
+}

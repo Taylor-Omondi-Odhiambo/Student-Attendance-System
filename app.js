@@ -63,11 +63,20 @@ app.get('/addStudents.html',(req,res) => {
             res.status(200).render('addStudents',{classes: result})
         }
     })
-   
 })
 
 app.get('/attendance.html',(req,res) => {
-    res.status(200).render('attendance')
+
+    conn.query((`SELECT ClassID FROM Classes`),(err,result) =>{
+        if (err)
+        {
+            console.log(err)
+        }
+        else
+        {
+            res.status(200).render('attendance',{classes:result})
+        }
+    })
 })
 
 app.get('/classes.html',(req,res) => {
@@ -135,7 +144,17 @@ app.get('/addStudents.ejs',(req,res) => {
 })
 
 app.get('/attendance.ejs',(req,res) => {
-    res.status(200).render('attendance')
+
+    conn.query((`SELECT ClassID FROM Classes`),(err,result) =>{
+        if (err)
+        {
+            console.log(err)
+        }
+        else
+        {
+            res.status(200).render('attendance',{classes:result})
+        }
+    })
 })
 
 app.get('/classes.ejs',(req,res) => {
@@ -181,6 +200,62 @@ app.get('/teachers.ejs',(req,res) => {
     })
 })
 
+
+app.post('/attendance',(req,res) => {
+    const classID = req.body.classID
+    conn.query((`SELECT * FROM ${classID}`),(err,result) =>{
+        if (err)
+        {
+            console.log(err)
+        }
+        else
+        {
+            res.status(200).render('displayAttendance',{units: result})
+        }
+    })
+})
+
+app.post('/takeAttendance',(req,res) => {
+    const attended = req.body.attended
+    const classID = req.body.classID
+    for ( let i = 0; i < attended.length; i++)
+    {
+        conn.query((`UPDATE ${attended[i]} SET Attended = Attended + 1, TotalClasses = TotalClasses + 1 WHERE ClassID = "${classID}" `),(err,result) => {
+            if (err)
+            {
+                console.log(err)
+            }
+            else
+            {
+
+            }
+        })        
+
+        conn.query((`UPDATE ${classID} SET Attended = Attended + 1 WHERE StudentID = "${attended[i]}"`),(err,result) => {
+            if (err)
+            {
+                console.log(err)
+            }
+            else
+            {
+
+            }
+        })
+    }
+    conn.query((`UPDATE ${classID} SET TotalClasses = TotalClasses + 1`),(err,result) =>{
+        if (err)
+        {
+            console.log(err)
+        }
+        else
+        {
+
+        }
+    })
+    console.log(attended)
+    console.log(classID)
+
+})
 
 app.post('/classes',(req,res) =>{
 

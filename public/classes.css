@@ -4,11 +4,18 @@ body{
 }
 
 #horizontalMenu{
-    display: flex;
-    justify-content: space-around;
-    position: sticky;
-    top: 0px;
+    position: fixed;
+    width: 100%;
     background-color: #22223b;
+    left: 0%;
+    top: 0%;
+    height: 50px;
+}
+#menuIcons{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    margin-top: 15px;
 }
 .links{
     color:#f2e9e4;
@@ -27,6 +34,11 @@ body{
     height: 140px;
     text-align: center;
 }
+
+#form{
+    margin: 100px 0;
+}
+
 .button{
     background-color: #22223b;
     color:#f2e9e4;
@@ -40,30 +52,3 @@ body{
     font-weight: 1000;
 }
 
-/* <div>
-            <table>
-                <tr>
-                    <td>StudentID</td>
-                    <td>ClassID</td>
-                    <td>FirstName</td>
-                    <td>Surname</td>
-                    <td>Attended</td>
-                    <td>Teacher</td>
-                    <td>TotalClasses</td>
-                </tr>
-                <% for (let i = 0; i < units.length; i++) { %>
-                    <tr>
-                        <td><%=units[i].StudentID%></td>
-                        <td><%=units[i].ClassID%></td>
-                        <td><%=units[i].FirstName%></td>
-                        <td><%=units[i].Surname%></td>
-                        <td><%=units[i].Attended%></td>
-                        <td><%=units[i].Teacher%></td>
-                        <td><%=units[i].TotalClasses%></td>
-                    </tr>
-                <% } %>
-
-            </table>
-            
-                
-        </div> */

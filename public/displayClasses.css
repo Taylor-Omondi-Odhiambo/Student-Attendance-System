@@ -7,13 +7,20 @@ h2{
     text-align: center;
     color: #22223b;
 }
+#menuIcons{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    margin-top: 15px;
+}
 
 #horizontalMenu{
-    display: flex;
-    justify-content: space-around;
-    position: sticky;
-    top: 0px;
+    position: fixed;
+    width: 100%;
     background-color: #22223b;
+    left: 0%;
+    top: 0%;
+    height: 50px;
 }
 .links{
     color:#f2e9e4;

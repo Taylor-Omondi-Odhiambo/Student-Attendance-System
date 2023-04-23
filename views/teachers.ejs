@@ -1,32 +1,41 @@
 <!DOCTYPE html>
 <html>
    
-<head>
-    <link rel ="stylesheet" href="/teachers.css">
-    <script src="https://kit.fontawesome.com/57a72e588d.js" crossorigin="anonymous"></script>
-</head>
+    <head>
+        <link rel ="stylesheet" href="/teachers.css">
+        <script src="https://kit.fontawesome.com/57a72e588d.js" crossorigin="anonymous"></script>
+    </head>
 
     <body>
         <div id = "horizontalMenu">
-            <a class = "links" href = "index.ejs">Home<i class="fas fa-home"></i></a>
-            <a class = "links" href = "classes.ejs">Classes<i class="fas fa-book"></i></a>
-            <a class = "links" href = "createClass.ejs">Create Classes<i class="fas fa-plus"></i></a>
-            <a class = "links" href = "students.ejs">Students<i class="fas fa-users"></i></a>
-            <a class = "links" href = "addStudents.ejs">Add Students<i class="fas fa-plus"></i></a>
-            <a class = "links" href = "teachers.ejs">Teachers<i class="fas fa-users"></i></a>
-            <a class = "links" href = "attendance.ejs">Take Attendance<i class="fas fa-address-book"></i></a>
+            <div id = "menuIcons">
+                <p></p>
+                <a class = "links" href = "index.ejs">Home<i class="fas fa-home"></i></a>
+                <a class = "links" href = "classes.ejs">Classes<i class="fas fa-book"></i></a>
+                <a class = "links" href = "createClass.ejs">Create Classes<i class="fas fa-plus"></i></a>
+                <a class = "links" href = "students.ejs">Students<i class="fas fa-users"></i></a>
+                <a class = "links" href = "addStudents.ejs">Add Students<i class="fas fa-plus"></i></a>
+                <a class = "links" href = "teachers.ejs">Teachers<i class="fas fa-users"></i></a>
+                <a class = "links" href = "attendance.ejs">Take Attendance<i class="fas fa-address-book"></i></a>
+                <p></p>
+            </div>
         </div><br><br>
-        <form action="/teachers" method="post" id = "teachers">
-            <legend id = "legend">Classes</legend><br>
-            <label for = "teachers">Teacher:</label>
-            <select type = "text" name = "teacher">
-                <option value = "">Select Teacher</option>
-                <% for (let i = 0; i < teachers.length; i ++) {%>
-                    <option value = "<%= teachers[i].Teacher %>"> <%= teachers[i].Teacher %></option>
-                <% } %>
-            </select><br><br>
-            <input class = "button" type = "submit" value = "Retrieve Teacher Details">
-        </form><br><br>
+
+        <div id = "form">
+            <h3 id = "warning">Select a Teacher to retrieve their data</h3>
+            <form action="/teachers" method="post" id = "teachers">
+                <legend id = "legend">Classes</legend><br>
+                <label for = "teachers">Teacher:</label>
+                <select type = "text" name = "teacher">
+                    <option value = "">Select Teacher</option>
+                    <% for (let i = 0; i < teachers.length; i ++) {%>
+                        <option value = "<%= teachers[i].Teacher %>"> <%= teachers[i].Teacher %></option>
+                    <% } %>
+                </select><br><br>
+                <input class = "button" type = "submit" value = "Retrieve Teacher Details">
+            </form><br><br>
+        </div>
+
     </body>
 </html>
     <script src = "/teachers.js">
