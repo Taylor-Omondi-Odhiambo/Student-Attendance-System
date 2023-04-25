@@ -38,7 +38,6 @@ conn.connect((err) =>{
         console.log("Database connection successful")
     }
 })
-
 /*
 Status codes
 200 - OK
@@ -254,7 +253,7 @@ app.post('/takeAttendance',(req,res) => {
     })
     console.log(attended)
     console.log(classID)
-
+    res.status(200).redirect('/attendance.ejs')
 })
 
 app.post('/classes',(req,res) =>{
@@ -320,6 +319,7 @@ app.post('/createClass',(req,res) =>{
     step1()
     step2()
     step3()
+    res.status(200).redirect('/createClass.ejs')
 })
 
 app.post('/addStudents',(req,res) =>{
@@ -432,7 +432,7 @@ app.post('/addStudents',(req,res) =>{
     step5()
     step6()
     step7()
-    res.status(201)
+    res.status(201).redirect('/addStudents.ejs')
 })
 
 app.post('/teachers',(req,res) => {
