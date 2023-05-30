@@ -125,6 +125,20 @@ app.get('/teachers.html',(req,res) => {
     })
 })
 
+
+app.get('/exam.html',(req,res) => {
+
+    conn.query((`SELECT ClassID FROM Classes`),(err,result) =>{
+        if (err)
+        {
+            console.log(err)
+        }
+        else
+        {
+            res.status(200).render('exam',{classes: result})
+        }
+    })
+})
 app.get('/index.ejs',(req,res) => {
     res.status(200).render('index')
 })
@@ -200,6 +214,18 @@ app.get('/teachers.ejs',(req,res) => {
     })
 })
 
+app.get('/exam.ejs',(req,res) => {
+    conn.query((`SELECT ClassID FROM Classes`),(err,result) =>{
+        if (err)
+        {
+            console.log(err)
+        }
+        else
+        {
+            res.status(200).render('exam',{classes: result})
+        }
+    })
+})
 
 app.post('/attendance',(req,res) => {
     const classID = req.body.classID
@@ -466,6 +492,22 @@ app.post((`/students`),(req,res) => {
     })
 })
 
+app.post('/exam',(req,res) =>{
+
+    const classID = req.body.classID
+
+    conn.query((`SELECT * FROM ${classID}`),(err,result) =>{
+        if (err)
+        {
+            console.log(err)
+        }
+        else
+        {  
+            res.status(200).render('displayExam',{units: result})
+        }
+    })
+
+})
 //port for the server to listen to
 app.listen(5000,(req,res) =>{
     console.log('Server runnning on port 5000...')

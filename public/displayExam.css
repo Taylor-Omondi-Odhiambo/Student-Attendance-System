@@ -1,0 +1,71 @@
+body{
+
+    /* background-color: #f2e9e4; */
+    background-image: url("hexagon.jpg");
+}
+
+h2{
+    text-align: center;
+    color: #051726;
+}
+#menuIcons{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    margin-top: 15px;
+}
+
+#horizontalMenu{
+    position: fixed;
+    width: 100%;
+    background-color: #051726;
+    left: 0%;
+    top: 0%;
+    height: 50px;
+}
+.links{
+    color:#f7f8f8;
+    text-decoration:none;
+}
+#legend{
+    background-color: #051726;
+    color:#f7f8f8;
+}
+.button{
+    background-color: #051726;
+    color:#f7f8f8;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+#table{
+    display: flex;
+    justify-content: space-around;
+}
+.records{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.records thead tr{
+    background-color: #051726;
+    color:#f7f8f8;
+    text-align: center;
+    font-weight: bold;
+}
+
+.records td{
+    padding: 12px 15px;
+    text-align: center;
+}
+.records tbody tr{
+    border-bottom: 1px solid ;
+}
+.records tbody tr:nth-of-type(even){
+    background-color: #051726;
+    color: #f7f8f8;
+}

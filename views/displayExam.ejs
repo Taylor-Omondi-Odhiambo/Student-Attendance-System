@@ -2,7 +2,7 @@
 <html>
    
     <head>
-        <link rel ="stylesheet" href="/displayClasses.css">
+        <link rel ="stylesheet" href="/displayExam.css">
         <script src="https://kit.fontawesome.com/57a72e588d.js" crossorigin="anonymous"></script>
     </head>
 
@@ -10,7 +10,7 @@
         <div id = "horizontalMenu">
             <div id = "menuIcons">
                 <p></p>
-                <a class = "links" href = "classes.ejs"><i class = "fas fa-arrow-left"></i>Back</a>
+                <a class = "links" href = "exam.ejs"><i class = "fas fa-arrow-left"></i>Back</a>
                 <a class = "links" href = "index.ejs">Home<i class="fas fa-home"></i></a>
                 <a class = "links" href = "createClass.ejs">Create Class<i class="fas fa-plus"></i></a>
                 <a class = "links" href = "addStudents.ejs">Add Students<i class="fas fa-plus"></i></a>
@@ -21,34 +21,28 @@
                 <p></p>
             </div>
         </div><br><br>
-        <h2><%=units[0].ClassID%> 's Data</h2>
+        <h2><%=units[0].ClassID%> Exam</h2>
         <div id = "table"> 
             <table class = "records">
                 <thead>
                     <tr>
                         <th width = "100px">StudentID</th>
-                        <th width = "100px">ClassID</th>
                         <th width = "100px">FirstName</th>
                         <th width = "100px">Surname</th>
-                        <th width = "100px">Attended</th>
-                        <th width = "100px">Teacher</th>
-                        <th width = "100px">TotalClasses</th>
                     </tr>
                 </thead>
                 <% for (let i = 0; i < units.length; i++) { %>
+                    <%if ( (units[i].Attended /units[i].TotalClasses) >= 0.7) { %>
                     <tr>
                         <td width = "100px"><%=units[i].StudentID%></td>
-                        <td width = "100px"><%=units[i].ClassID%></td>
                         <td width = "100px"><%=units[i].FirstName%></td>
                         <td width = "100px"><%=units[i].Surname%></td>
-                        <td width = "100px"><%=units[i].Attended%></td>
-                        <td width = "100px"><%=units[i].Teacher%></td>
-                        <td width = "100px"><%=units[i].TotalClasses%></td>
                     </tr>
+                    <%}%>
                 <% } %>
             </table>
         </div>
     </body>
-    <script src = "/displayClasses.js">
+    <script src = "/displayExam.js">
 
     </script>
