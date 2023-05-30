@@ -2,7 +2,7 @@
 <html>
    
     <head>
-        <link rel ="stylesheet" href="/displayExam.css">
+        <link rel ="stylesheet" href="/displayDefaulters.css">
         <script src="https://kit.fontawesome.com/57a72e588d.js" crossorigin="anonymous"></script>
     </head>
 
@@ -10,14 +10,13 @@
         <div id = "horizontalMenu">
             <div id = "menuIcons">
                 <p></p>
-                <a class = "links" href = "exam.ejs"><i class = "fas fa-arrow-left"></i>Back</a>
+                <a class = "links" href = "defaulters.ejs"><i class = "fas fa-arrow-left"></i>Back</a>
                 <a class = "links" href = "index.ejs">Home<i class="fas fa-home"></i></a>
                 <a class = "links" href = "createClass.ejs">Create Class<i class="fas fa-plus"></i></a>
                 <a class = "links" href = "addStudents.ejs">Add Students<i class="fas fa-plus"></i></a>
                 <a class = "links" href = "students.ejs">Students<i class="fas fa-users"></i></a>
                 <a class = "links" href = "teachers.ejs">Teachers<i class="fas fa-users"></i></a>
                 <a class = "links"href = "exam.ejs">Exam qualification<i class="fas fa-file"></i></a>
-                <a class = "links"href = "defaulters.ejs">Defaulters<i class="fas fa-exclamation-triangle"></i></a>
                 <a class = "links" href = "attendance.ejs">Take Attendance<i class="fas fa-address-book"></i></a>
                 <p></p>
             </div>
@@ -33,7 +32,7 @@
                     </tr>
                 </thead>
                 <% for (let i = 0; i < units.length; i++) { %>
-                    <%if ( (units[i].Attended /units[i].TotalClasses) <= 0.7) { %>
+                    <%if ( (units[i].Attended /units[i].TotalClasses) >= 0.7) { %>
                     <tr>
                         <td width = "100px"><%=units[i].StudentID%></td>
                         <td width = "100px"><%=units[i].FirstName%></td>
@@ -44,6 +43,6 @@
             </table>
         </div>
     </body>
-    <script src = "/displayExam.js">
+    <script src = "/displayDefaulters.js">
 
     </script>

@@ -2,7 +2,7 @@
 <html>
    
     <head>
-        <link rel ="stylesheet" href="/exam.css">
+        <link rel ="stylesheet" href="/defaulters.css">
         <script src="https://kit.fontawesome.com/57a72e588d.js" crossorigin="anonymous"></script>
     </head>
 
@@ -15,14 +15,13 @@
                 <a class = "links" href = "createClass.ejs">Create Class<i class="fas fa-plus"></i></a>
                 <a class = "links" href = "students.ejs">Students<i class="fas fa-users"></i></a>
                 <a class = "links" href = "teachers.ejs">Teachers<i class="fas fa-users"></i></a>
-                <a class = "links"href = "defaulters.ejs">Defaulters<i class="fas fa-exclamation-triangle"></i></a>
                 <a class = "links" href = "attendance.ejs">Take Attendance<i class="fas fa-address-book"></i></a>
                 <p></p>
             </div>
         </div><br><br>
 
         <div id = "form">
-            <h3 id = "warning">Select a unit to view students sitting for the exam</h3>
+            <h3 id = "warning">Select a unit to view defaulters for that unit</h3>
             <form method = "post" action="/exam" id = "classes">
                 <legend id = "legend">Classes</legend><br>
                 <label for = "classID">Class ID:</label>
@@ -37,6 +36,6 @@
         </div>
     </body>
 
-    <script src = "/exam.js">
+    <script src = "/defaulters.js">
 
     </script>

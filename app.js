@@ -139,6 +139,20 @@ app.get('/exam.html',(req,res) => {
         }
     })
 })
+
+app.get('/defaulters.html',(req,res) => {
+
+    conn.query((`SELECT ClassID FROM Classes`),(err,result) =>{
+        if (err)
+        {
+            console.log(err)
+        }
+        else
+        {
+            res.status(200).render('defaulters',{classes: result})
+        }
+    })
+})
 app.get('/index.ejs',(req,res) => {
     res.status(200).render('index')
 })
@@ -227,6 +241,18 @@ app.get('/exam.ejs',(req,res) => {
     })
 })
 
+app.get('/defaulters.ejs',(req,res) => {
+    conn.query((`SELECT ClassID FROM Classes`),(err,result) =>{
+        if (err)
+        {
+            console.log(err)
+        }
+        else
+        {
+            res.status(200).render('defaulters',{classes: result})
+        }
+    })
+})
 app.post('/attendance',(req,res) => {
     const classID = req.body.classID
     conn.query((`SELECT * FROM ${classID}`),(err,result) =>{
@@ -504,6 +530,23 @@ app.post('/exam',(req,res) =>{
         else
         {  
             res.status(200).render('displayExam',{units: result})
+        }
+    })
+
+})
+
+app.post('/defaulters',(req,res) =>{
+
+    const classID = req.body.classID
+
+    conn.query((`SELECT * FROM ${classID}`),(err,result) =>{
+        if (err)
+        {
+            console.log(err)
+        }
+        else
+        {  
+            res.status(200).render('displayDefaulters',{units: result})
         }
     })
 
