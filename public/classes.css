@@ -1,12 +1,13 @@
 body{
 
-    background-color: #f2e9e4;
+    /* background-color: #f2e9e4; */
+    background-image: url("hexagon.jpg");
 }
 
 #horizontalMenu{
     position: fixed;
     width: 100%;
-    background-color: #22223b;
+    background-color: #051726;
     left: 0%;
     top: 0%;
     height: 50px;
@@ -18,12 +19,12 @@ body{
     margin-top: 15px;
 }
 .links{
-    color:#f2e9e4;
+    color:#f7f8f8;
     text-decoration:none;
 }
 #legend{
-    background-color: #22223b;
-    color:#f2e9e4
+    background-color: #051726;
+    color:#f7f8f8;
 }
 #classes{
     margin: 10px 0;
@@ -40,15 +41,15 @@ body{
 }
 
 .button{
-    background-color: #22223b;
-    color:#f2e9e4;
+    background-color: #051726;
+    color:#f7f8f8;
     padding: 5px 10px;
     border-radius: 10px;
 }
 
 #warning{
     text-align: center;
-    color: #22223b;
+    color: #051726;
     font-weight: 1000;
 }
 

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
     <html>
-
         <head>
             <meta charset="UTF-8">
             <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
@@ -8,49 +7,64 @@
             <link rel ="stylesheet" href = "/index.css">
             <script src="https://kit.fontawesome.com/57a72e588d.js" crossorigin="anonymous"></script>
         </head>
-
         <body>
-            <div id = "horizontalMenu">
-                <div id = "menuIcons">
-                    <p></p>
-                    <a class = "links" href = "classes.ejs">Classes<i class="fas fa-book"></i></a>
-                    <a class = "links" href = "createClass.ejs">Create Class<i class="fas fa-plus"></i></a>
-                    <a class = "links" href = "students.ejs">Students<i class="fas fa-users"></i></a>
-                    <a class = "links" href = "addStudents.ejs">Add Students<i class="fas fa-plus"></i></a>
-                    <a class = "links" href = "teachers.ejs">Teachers<i class="fas fa-users"></i></a>
-                    <a class = "links" href = "attendance.ejs">Take Attendance<i class="fas fa-address-book"></i></a>
-                    <p></p>
-                </div>
-            </div><br><br>
-
-                        <div id = "set1">
-                            <a href="createClass.ejs">
-                                <button class = "mainModules" >Create Class<i class="fas fa-plus"></i></button>
-                            </a>
-                            <a href="classes.ejs">
-                                <button class = "mainModules">Classes<br><i class="fas fa-book"></i></button>
-                            </a>
-                            <a href="teachers.ejs">
-                                <button class = "mainModules">Teachers<br><i class="fas fa-users"></i></button>
-                            </a>
-                        </div >
-                        <div id = "set2">
-                            <a href="addStudents.ejs">
-                                <button class = "mainModules">Add Students<i class="fas fa-plus"></i></button>
-                            </a>
-                            <a href="attendance.ejs">
-                                <button class = "mainModules">Take Attendance<i class="fas fa-address-book"></i></button>
-                            </a>
-                            <a href="students.ejs">
-                                <button class = "mainModules">Students<i class="fas fa-users"></i></button>
-                            </a>
+                <div id = "horizontalMenu">
+                    <div id = "menuIcons">
+                        <div>
+                            <img id = "logo" src = "logo.png" height="40px">
                         </div>
-            <!-- <div id="footer">
-                <p>Developer: Taylor Omondi Odhiambo Email: tayloromondi05@gmail.com</p>
-                <p>CSC 227: Programming Project</p>
-                <p>Supervisor: Christopher A. Moturi</p>
-            </div> -->
-
+                        <a id = "anchor" href = "classes.ejs">Classes<i class="fas fa-book"></i></a>
+                        <!-- <a class = "links" href = "createClass.ejs">Create Class<i class="fas fa-plus"></i></a> -->
+                        <a class = "links" href = "students.ejs">Students<i class="fas fa-users"></i></a>
+                        <!-- <a class = "links" href = "addStudents.ejs">Add Students<i class="fas fa-plus"></i></a> -->
+                        <a class = "links" href = "teachers.ejs">Teachers<i class="fas fa-users"></i></a>
+                        <button id = "btn"><a id = "linksss" href = "attendance.ejs">Take Attendance<i class="fas fa-address-book"></i></a></button>
+                        <p></p>
+                </div>
+                <div id = "main">
+                    <div class = "verticalMenu">
+                        <a id = "linkss"href = "classes.ejs">Classes<i class="fas fa-book"></i></a>
+                        <a id = "linkss"href = "createClass.ejs">Create Class<i class="fas fa-plus"></i></a>
+                        <a id = "linkss"href = "students.ejs">Students<i class="fas fa-users"></i></a>
+                        <a id = "linkss"href = "addStudents.ejs">Add Students<i class="fas fa-plus"></i></a>
+                        <a id = "linkss"href = "teachers.ejs">Teachers<i class="fas fa-users"></i></a>
+                        <a id = "linkss"href = "attendance.ejs">Take Attendance<i class="fas fa-address-book"></i></a>
+                    </div>
+                    <div id = content > 
+                            <h1>Welcome to our Student Attendance Tracker!</h1>
+                            <p>Efficiently managing student attendance has never been easier.</p>
+                            <p>Our web app provides a comprehensive solution for tracking attendance, managing classes, 
+                             accessing relevant information</p>
+                            <p>ensuring a seamless and organized educational experience.</p>
+                    </div>
+                            <!-- <div id = "set1">
+                                <a href="createClass.ejs">
+                                    <button class = "mainModules" >Create Class<i class="fas fa-plus"></i></button>
+                                </a>
+                                <a href="classes.ejs">
+                                    <button class = "mainModules">Classes<br><i class="fas fa-book"></i></button>
+                                </a>
+                                <a href="teachers.ejs">
+                                    <button class = "mainModules">Teachers<br><i class="fas fa-users"></i></button>
+                                </a>
+                            </div >
+                            <div id = "set2">
+                                <a href="addStudents.ejs">
+                                    <button class = "mainModules">Add Students<i class="fas fa-plus"></i></button>
+                                </a>
+                                <a href="attendance.ejs">
+                                    <button class = "mainModules">Take Attendance<i class="fas fa-address-book"></i></button>
+                                </a>
+                                <a href="students.ejs">
+                                    <button class = "mainModules">Students<i class="fas fa-users"></i></button>
+                                </a>
+                            </div> -->
+                <!-- <div id="footer">
+                    <p>Developer: Taylor Omondi Odhiambo Email: tayloromondi05@gmail.com</p>
+                    <p>CSC 227: Programming Project</p>
+                    <p>Supervisor: Christopher A. Moturi</p>
+                </div> -->
+                </div>
         </body>
 
         <script src ="/index.js"></script>

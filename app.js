@@ -19,6 +19,7 @@ app.use(bodyParser.json());
 app.set('views','./views')//method to identify folder with ejs files
 app.set('view engine','ejs')
 app.use(express.static(path.join(__dirname,'/public')))//method to identify folder with static files
+
 //Create database connection
 const conn = mysql.createConnection({
     host: 'localhost',
@@ -251,8 +252,8 @@ app.post('/takeAttendance',(req,res) => {
 
         }
     })
-    console.log(attended)
-    console.log(classID)
+    // console.log(attended)
+    // console.log(classID)
     res.status(200).redirect('/attendance.ejs')
 })
 
@@ -266,7 +267,7 @@ app.post('/classes',(req,res) =>{
             console.log(err)
         }
         else
-        {   console.log(result)
+        {  
             res.status(200).render('displayClasses',{units: result})
         }
     })
@@ -464,6 +465,7 @@ app.post((`/students`),(req,res) => {
         }
     })
 })
+
 //port for the server to listen to
 app.listen(5000,(req,res) =>{
     console.log('Server runnning on port 5000...')

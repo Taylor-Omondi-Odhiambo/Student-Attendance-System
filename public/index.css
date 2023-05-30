@@ -3,26 +3,80 @@
     text-align: center;
 }
 body{
-    background-color: #f2e9e4;
+    /* background-color: #f2e9e4; */
+    background-image: url("hexagon.jpg"); 
 }
 
 #horizontalMenu{
     position: fixed;
     width: 100%;
-    background-color: #22223b;
+    background-color: #051726; 
     left: 0%;
     top: 0%;
-    height: 50px;
+    height: 75px; 
 }
-#menuIcons{
+#main{
     display: flex;
-    justify-content: space-between;
-    height: 50px;
-    margin-top: 15px;
+    margin: 20px 0;
+}
+#content{
+    margin-left: 200px;
+    height: 100vh;
+} 
+.verticalMenu /*a*/{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: #051726; 
+    height: 100vh;
+    width: 20vh;
+/* display: block;
+padding-top: 80px;
+margin: 0 1rem;  */
+}
+#btn{
+    margin-top: 20px;
+    margin-left: 100px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #f7f8f8; 
+    padding: 0 5;
 }
 
+#linkss{
+    margin-top: 50px;
+    margin-left:20px ;
+    color:#f7f8f8;
+    text-decoration:none;
+}
+#logo{
+    height: 85px;
+}
+#corner{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: #051726; 
+}
+#menuIcons{
+     display: flex;
+    /* justify-content: space-between; */
+    height: 50px;
+}
+#linksss{
+    color: #051726;
+    text-decoration: none;
+} 
+#anchor{
+    margin-top: 20px; ;
+    color:#f7f8f8;
+    text-decoration:none;
+    margin-left: 80px;
+}
 .links{
-    color:#f2e9e4;
+    margin-top: 20px;
+    margin-left: 100px;
+    color:#f7f8f8;
     text-decoration:none;
 }
 #set1{
@@ -36,13 +90,13 @@ body{
     justify-content: space-around;
 }
 
-.mainModules{
+/* .mainModules{
     border-radius: 10px;
     height: 100px;
     width: 100px;
     color: #22223b;
     background-color: #f2e9e4; 
-}
+}  */
 
 /* #footer {
     position: fixed;

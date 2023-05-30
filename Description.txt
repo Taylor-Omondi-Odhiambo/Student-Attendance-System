@@ -1,0 +1,5 @@
+Welcome to our Student Attendance Tracker!
+
+Efficiently managing student attendance has never been easier.
+Our web app provides a comprehensive solution for tracking attendance, managing classes, and accessing relevant information, 
+ensuring a seamless and organized educational experience.
