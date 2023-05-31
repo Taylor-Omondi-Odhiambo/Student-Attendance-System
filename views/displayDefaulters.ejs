@@ -21,7 +21,7 @@
                 <p></p>
             </div>
         </div><br><br>
-        <h2><%=units[0].ClassID%> Exam</h2>
+        <h2><%=units[0].ClassID%> Defaulters</h2>
         <div id = "table"> 
             <table class = "records">
                 <thead>
@@ -32,7 +32,7 @@
                     </tr>
                 </thead>
                 <% for (let i = 0; i < units.length; i++) { %>
-                    <%if ( (units[i].Attended /units[i].TotalClasses) >= 0.7) { %>
+                    <%if ( (units[i].Attended /units[i].TotalClasses) <= 0.7) { %>
                     <tr>
                         <td width = "100px"><%=units[i].StudentID%></td>
                         <td width = "100px"><%=units[i].FirstName%></td>

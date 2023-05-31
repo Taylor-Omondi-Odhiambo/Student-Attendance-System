@@ -33,7 +33,7 @@
                     </tr>
                 </thead>
                 <% for (let i = 0; i < units.length; i++) { %>
-                    <%if ( (units[i].Attended /units[i].TotalClasses) <= 0.7) { %>
+                    <%if ( (units[i].Attended /units[i].TotalClasses) >= 0.7) { %>
                     <tr>
                         <td width = "100px"><%=units[i].StudentID%></td>
                         <td width = "100px"><%=units[i].FirstName%></td>
